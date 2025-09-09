@@ -27,7 +27,7 @@ Dit project werkt alleen als je Laragon 6 draait met PHP 8.1.x en MySQL 8.x. Geb
 9. Open het Laragon venster en klik op stop, en daarna weer op start all. Als er een windows beveiligingsvenster opent, klik dan op ja. 
 10. Ga naar 4s_manuals.test
 
-
+    
 
 ## Uitleg mappen en bestanden
 
