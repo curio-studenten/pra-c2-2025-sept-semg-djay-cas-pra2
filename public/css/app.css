@@ -53,15 +53,14 @@ html {
 
 footer {
     justify-content: center;
-    display: flex;
     background-color: #343a40;
     color: white;
-    width: 100vw;
-    margin: auto;
-    padding: auto;
-    margin-left: -210px;
+    /* width: 100vw; */
+    margin-top: 100px;
 }
-
+footer .Text{
+    text-align: center;
+}
 article,
 aside,
 figcaption,

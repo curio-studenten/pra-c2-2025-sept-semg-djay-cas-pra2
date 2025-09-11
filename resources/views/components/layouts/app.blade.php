@@ -36,9 +36,8 @@
                 </ul>
             </div>
         </div>
-        <x-footer />
     </div>
-
+    <x-footer />
     </div>
 
 

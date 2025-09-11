@@ -13,14 +13,18 @@ return [
     |
     */
 
-    'home' => "Home",
-'home_alt' => "Download your manual homepage: Free user guides!",
-'homepage_title' => "Download your manual",
+    'home' => "Hoofdpagina",
+'home_alt' => "Download je handleiding: Gratis gebruikersgidsen!",
+'homepage_title' => "Download je handleiding",
 'copyright' => "Copyright 2025 Avarix",
-'download_manual' => "Click here to download the manual",
-'download_manual_alt' => "Download your manual here",
-'view_manual' => "Directly view your manual",
-'view_manual_alt' => "Directly view your manual",
-'all_brands' => "All brands",
-
+'download_manual' => "Klik hier om je handleiding te downloaden",
+'download_manual_alt' => "Klik hier om je handleiding te downloaden",
+'view_manual' => "Bekijk direct je handleiding",
+'view_manual_alt' => "Bekijk direct je handleiding",
+'all_brands' => "Alle merken",
+'title' => "We are the best provider of user manuals for different companies",
+'naam' => "Avarix BV",
+'adres' => "Adres: Knipplein 11, 4707MN, Roosendaal",
+'telefoon' => "Telefoon: +31 6 123 4567",
+'email' => "E-mail: Avarix@gmail.com",
 ];

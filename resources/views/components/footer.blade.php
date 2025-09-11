@@ -1,15 +1,16 @@
 <footer>
-  © {{ __('misc.copyright') }}
-  <h1>Over ons</h1>
-  <h3> {{ __('misc.naam') }} </h3>
-  <p> {{ __('misc.title') }} </p>
-  <p> {{ __('misc.adres') }} </p>
-  <p> {{ __('misc.telefoon') }} </p>
-  <p> {{ __('misc.email') }} </p>
-  <div class="footer-links">
-    <a href="/" target="_blank">YouTube</a>
-    <a href="/" target="_blank">Instagram</a>
-    <a href="/" target="_blank">Facebook</a>
+  <div class="Text">
+    <h1>Over ons</h1>
+    <h3> {{ __('misc.naam') }} </h3>
+    <p> {{ __('misc.title') }} </p>
+    <p> {{ __('misc.adres') }} </p>
+    <p> {{ __('misc.telefoon') }} - {{ __('misc.email') }} </p>
+    <div class="footer-links">
+      <a href="/" target="_blank">YouTube</a> - 
+      <a href="/" target="_blank">Instagram</a> -
+      <a href="/" target="_blank">Facebook</a>
+    </div>
+        © {{ __('misc.copyright') }}
   </div>
 </footer>
 
@@ -20,7 +21,7 @@
   _gaq.push(['_setAccount', 'UA-30506707-1']);
   _gaq.push(['_trackPageview']);
 
-  (function() {
+  (function () {
     var ga = document.createElement('script');
     ga.type = 'text/javascript';
     ga.async = true;
