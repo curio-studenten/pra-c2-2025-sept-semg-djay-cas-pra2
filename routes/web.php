@@ -36,8 +36,9 @@ use App\Http\Controllers\LocaleController;
 
 // Homepage
 Route::get('/', function () {
+    $teamname = "Team Djay-Cas-Sem";
     $brands = Brand::all()->sortBy('name');
-    return view('pages.homepage', compact('brands'));
+    return view('pages.homepage', compact('brands', 'teamname'));
 })->name('home');
 
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);
