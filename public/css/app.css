@@ -5537,6 +5537,11 @@ a.close.disabled {
     margin: 0.25rem;
 }
 
+.footer-links {
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
 .modal-scrollbar-measure {
     position: absolute;
     top: -9999px;
