@@ -7,10 +7,17 @@
     </x-slot:introduction_text>
 
     <h1>
+      
         <x-slot:title>
             {{ __('misc.all_brands') }}
         </x-slot:title>
     </h1>
+    <div class="teamname">
+        <strong>{{ $teamname }}</strong>
+    </div>
+    
+       
+   
 
 
     <?php
@@ -20,6 +27,7 @@
     ?>
 
     <div class="container">
+
         <!-- Example row of columns -->
         <div class="row">
 
