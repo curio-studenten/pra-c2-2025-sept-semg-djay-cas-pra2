@@ -22,6 +22,7 @@ return [
 'view_manual' => "Bekijk direct je handleiding",
 'view_manual_alt' => "Bekijk direct je handleiding",
 'all_brands' => "Alle merken",
+'over' => 'About us',
 'title' => "We are the best provider of user manuals for different companies",
 'naam' => "Avarix BV",
 'adres' => "Adres: Knipplein 11, 4707MN, Roosendaal",

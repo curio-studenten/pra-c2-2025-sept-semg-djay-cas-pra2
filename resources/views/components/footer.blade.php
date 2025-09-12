@@ -1,6 +1,6 @@
 <footer>
   <div class="Text">
-    <h1>Over ons</h1>
+<h1>{{ __('misc.over') }}</h1>
     <h3> {{ __('misc.naam') }} </h3>
     <p> {{ __('misc.title') }} </p>
     <p> {{ __('misc.adres') }} </p>
