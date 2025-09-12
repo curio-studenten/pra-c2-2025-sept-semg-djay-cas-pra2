@@ -5,25 +5,31 @@
     </x-slot:head>
 
     <x-slot:breadcrumb>
-        <li><a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/" alt="Manuals for '{{$brand->name}}'" title="Manuals for '{{$brand->name}}'">{{ $brand->name }}</a></li>
+        <li>
+            <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/"
+                title="Manuals for '{{ $brand->name }}'">
+                {{ $brand->name }}
+            </a>
+        </li>
     </x-slot:breadcrumb>
-
 
     <h1>{{ $brand->name }}</h1>
 
-    <p>{{ __('introduction_texts.type_list', ['brand'=>$brand->name]) }}</p>
-
-
+    <p>{{ __('introduction_texts.type_list', ['brand' => $brand->name]) }}</p>
+    <div class="manual-container">
         @foreach ($manuals as $manual)
-
-            @if ($manual->locally_available)
-                <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
-                ({{$manual->filesize_human_readable}})
-            @else
-                <a href="{{ $manual->url }}" target="new" alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
-            @endif
-
-            <br />
+            <div class="manual-item">
+                @if ($manual->locally_available)
+                    <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/"
+                        title="{{ $manual->name }}">
+                        {{ $manual->name }}
+                    </a>
+                @else
+                    <a href="{{ $manual->url }}" target="_blank" title="{{ $manual->name }}">
+                        {{ $manual->name }}
+                    </a>
+                @endif
+            </div>
         @endforeach
-
+    </div>
 </x-layouts.app>
