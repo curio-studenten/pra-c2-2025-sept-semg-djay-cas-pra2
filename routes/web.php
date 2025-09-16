@@ -34,6 +34,7 @@ use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\LocaleController;
 
+Route::get('/manual/redirect/{manual}', [ManualController::class, 'redirectToManual'])->name('manual.redirect');
 // Homepage
 Route::get('/', function () {
     $teamname = "Team Djay-Cas-Sem";
@@ -57,3 +58,5 @@ Route::get('/{brand_id}/{brand_slug}/{manual_id}/', [ManualController::class, 's
 
 // Generate sitemaps
 Route::get('/generateSitemap/', [SitemapController::class, 'generate']);
+
+

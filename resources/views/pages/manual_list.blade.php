@@ -19,16 +19,9 @@
     <div class="manual-container">
         @foreach ($manuals as $manual)
             <div class="manual-item">
-                @if ($manual->locally_available)
-                    <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/"
-                        title="{{ $manual->name }}">
-                        {{ $manual->name }}
-                    </a>
-                @else
-                    <a href="{{ $manual->url }}" target="_blank" title="{{ $manual->name }}">
-                        {{ $manual->name }}
-                    </a>
-                @endif
+                <a href="{{ route('manual.redirect', ['manual' => $manual->id]) }}" target="_blank" title="{{ $manual->name }}">
+                    {{ $manual->name }}
+                </a>
             </div>
         @endforeach
     </div>
