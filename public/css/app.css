@@ -1249,7 +1249,7 @@ pre code {
     .col-md-8 {
         flex: 0 0 66.6666666667%;
         max-width: 66.6666666667%;
-        background: #343a40;
+        background: #6b6d6e;
     }
 
     .col-md-9 {
@@ -7137,7 +7137,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-    background-color: #343a40 !important;
+    background-color: #6b6d6e !important;
 }
 
 a.bg-dark:hover,
@@ -11028,4 +11028,13 @@ a.text-dark:focus {
     padding: 0 5px;
     color: #ccc;
     content: "/ ";
+}
+
+.alphabet{
+    display: flex;
+    flex-direction: row;
+}
+
+.Ga-naar-letter{
+    color: white;
 }
