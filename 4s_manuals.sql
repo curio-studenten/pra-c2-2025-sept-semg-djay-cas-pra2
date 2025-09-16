@@ -69,7 +69,7 @@ INSERT INTO `brands` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (38, 'Fujitsu', NULL, NULL),
 (39, 'Lenovo', NULL, NULL),
 (40, 'Apple', NULL, NULL),
-(41, 'Carl Zeiss', NULL, NULL),brandsfailed_jobsmanuals-------------------
+(41, 'Carl Zeiss', NULL, NULL)
 
 --
 -- Dumping data for table `manuals`
@@ -182,4 +182,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-4s_manualsbrandsbuildingsanimals
