@@ -59,13 +59,29 @@ footer {
     margin-top: 100px;
 }
 
-.teamname{
+.teamname {
     color: white;
 }
+.manual-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 15px;
+}
 
-footer .Text{
+.manual-item {
+    padding: 10px;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    background: #fafafa;
     text-align: center;
 }
+
+
+footer .Text {
+    text-align: center;
+}
+
 article,
 aside,
 figcaption,
@@ -4962,7 +4978,7 @@ input[type=button].btn-block {
 .navbar-dark .navbar-brand:focus {
     background-color: #4d90fe;
     color: #ffffff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
 }
 
