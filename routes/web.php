@@ -33,6 +33,7 @@ use App\Http\Controllers\ManualController;
 use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\LocaleController;
+use Illuminate\Http\Request;
 
 Route::get('/manual/redirect/{manual}', [ManualController::class, 'redirectToManual'])->name('manual.redirect');
 // Homepage
@@ -59,4 +60,14 @@ Route::get('/{brand_id}/{brand_slug}/{manual_id}/', [ManualController::class, 's
 // Generate sitemaps
 Route::get('/generateSitemap/', [SitemapController::class, 'generate']);
 
+Route::view('/contact', 'pages.contact')->name('contact');
 
+Route::get('/set-locale/{locale}', function (Request $request, $locale) {
+    if (! in_array($locale, ['en', 'nl'])) {
+        $locale = 'en'; // fallback
+    }
+
+    $request->session()->put('locale', $locale);
+
+    return redirect()->back();
+})->name('setLocale');
