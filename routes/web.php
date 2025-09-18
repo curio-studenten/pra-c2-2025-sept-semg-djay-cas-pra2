@@ -39,7 +39,9 @@ Route::get('/manual/redirect/{manual}', [ManualController::class, 'redirectToMan
 Route::get('/', function () {
     $teamname = "Team Djay-Cas-Sem";
     $brands = Brand::all()->sortBy('name');
-    return view('pages.homepage', compact('brands', 'teamname'));
+    $topManuals = \App\Models\Manual::with('brand')->orderBy('views', 'desc')->take(10)->get();
+    
+    return view('pages.homepage', compact('brands', 'teamname', 'topManuals'));
 })->name('home');
 
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);

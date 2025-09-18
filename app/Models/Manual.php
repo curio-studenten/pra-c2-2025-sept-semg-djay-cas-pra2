@@ -53,4 +53,10 @@ class Manual extends Model
 
         return $url; */
     }
+
+    // Relatie naar Brand
+    public function brand()
+    {
+        return $this->belongsTo(\App\Models\Brand::class, 'brand_id');
+    }
 }

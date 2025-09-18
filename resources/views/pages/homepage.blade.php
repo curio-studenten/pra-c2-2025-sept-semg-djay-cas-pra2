@@ -11,6 +11,8 @@
             {{ __('misc.all_brands') }}
         </x-slot:title>
     </h1>
+
+    
     <div class="teamname">
         <strong>{{ $teamname }}</strong>
     </div>
@@ -71,6 +73,17 @@
         <a href="#Z">Z</a>
     </div>
 
+     <h2>Top 10 meest bekeken handleidingen</h2>
+    <ol>
+        @foreach($topManuals as $manual)
+            <li>
+                ({{ $manual->brand->name }} )
+                 <a href="{{ route('manual.redirect', ['manual' => $manual->id]) }}" target="_blank">
+                    {{ $manual->name }}
+                </a>
+            </li>
+        @endforeach
+    </ol>
     <?php
     $size = count($brands);
     $columns = 3;
@@ -107,5 +120,7 @@
             @endforeach
         </div>
     </div>
+
+    
 
 </x-layouts.app>
