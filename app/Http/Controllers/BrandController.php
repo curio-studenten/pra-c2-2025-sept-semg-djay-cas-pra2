@@ -1,6 +1,4 @@
-<?php
-
-namespace App\Http\Controllers;
+<?php namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Brand;
@@ -8,17 +6,30 @@ use App\Models\Manual;
 
 class BrandController extends Controller
 {
-    public function show($brand_id, $brand_slug)
+    public function show($brand_id, $brand_slug , $manual_id = null)
     {
-        
-
+        // Vind de brand
         $brand = Brand::findOrFail($brand_id);
         $manuals = Manual::all()->where('brand_id', $brand_id);
+       
 
-        return view('pages/manual_list', [
+
+
+
+        // Haal alle manuals van deze brand, gesorteerd op views
+        $top5Manuals = Manual::where('brand_id', $brand_id)
+                        ->limit(5)
+                         ->orderBy('views', 'desc')
+                         ->get();
+
+        // Eventueel kun je hier nog andere oude functionaliteit behouden
+        // Bijvoorbeeld: je kunt extra filtering of logica toevoegen zoals voorheen
+
+        return view('pages.manual_list', [
+            
             "brand" => $brand,
+            "top5Manuals" => $top5Manuals,
             "manuals" => $manuals
         ]);
-
     }
 }

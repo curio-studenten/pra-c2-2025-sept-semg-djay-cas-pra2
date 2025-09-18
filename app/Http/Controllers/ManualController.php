@@ -18,12 +18,16 @@ class ManualController extends Controller
         $brand = Brand::findOrFail($brand_id);
         $manual = Manual::findOrFail($manual_id);
 
+        
+
        
 
         return view('pages/manual_view', [
             "manual" => $manual,
             "brand" => $brand,
+           
         ]);
+
     }
     public function redirectToManual($manualId)
     {
@@ -37,4 +41,5 @@ class ManualController extends Controller
         // Stuur door naar de echte manual-link
         return redirect($manual->url);
     }
+    
 }

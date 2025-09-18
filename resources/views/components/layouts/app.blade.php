@@ -17,8 +17,8 @@
 
                 <ul class="breadcrumb">
                     <li><a href="/" title="{{ __('misc.home_alt') }}"
-                            alt="{{ __('misc.home_alt') }}">{{ __('misc.home') }}</a></li>- 
-                            <a href="{{ route('contact') }}">Contact</a>
+                            alt="{{ __('misc.home_alt') }}">{{ __('misc.home') }}</a></li>ㅤ/ㅤ
+                            <a href="{{ route('contact') }}">Contact</a>ㅤ
                     {{ $breadcrumb ?? '' }}
                 </ul>
 
@@ -31,8 +31,8 @@
                 <ul class="breadcrumb">
                     <li>
                         <a href="/" title="{{ __('misc.home_alt') }}"
-                            alt="{{ __('misc.home_alt') }}">{{ __('misc.home') }}</a>-
-                            <a href="{{ route('contact') }}">Contact</a>
+                            alt="{{ __('misc.home_alt') }}">{{ __('misc.home') }}</a>ㅤ/ㅤ  
+                            <a href="{{ route('contact') }}">Contact</a>ㅤ
                     </li>
                     {{ $breadcrumb ?? '' }}
                 </ul>
