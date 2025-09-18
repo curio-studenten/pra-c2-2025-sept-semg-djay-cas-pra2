@@ -41,8 +41,8 @@ Route::get('/', function () {
     $teamname = "Team Djay-Cas-Sem";
     $brands = Brand::all()->sortBy('name');
     $topManuals = \App\Models\Manual::with('brand')->orderBy('views', 'desc')->take(10)->get();
-    
-    return view('pages.homepage', compact('brands', 'teamname', 'topManuals'));
+    $description = __(key: 'misc.homepag_description');
+    return view('pages.homepage', compact('brands', 'teamname', 'topManuals', 'description'));
 })->name('home');
 
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);
@@ -51,7 +51,7 @@ Route::get('/manual/{language}/{brand_slug}/brand.html', [RedirectController::cl
 Route::get('/datafeeds/{brand_slug}.xml', [RedirectController::class, 'datafeed']);
 
 // Locale routes
-Route::get('/language/{language_slug}/', [LocaleController::class, 'changeLocale']);
+Route::get('/language/{language_slug}/', [LocaleController::class, 'changeLocale'])->name('lang-switch');
 
 // List of manuals for a brand
 Route::get('/{brand_id}/{brand_slug}/', [BrandController::class, 'show']);

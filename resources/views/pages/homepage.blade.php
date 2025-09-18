@@ -74,6 +74,7 @@
     </div>
 
      <h2>Top 10 meest bekeken handleidingen</h2>
+     <p>{{ __(key: 'misc.homepage_description') }}</p>
     <ol>
         @foreach($topManuals as $manual)
             <li>

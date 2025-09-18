@@ -18,7 +18,8 @@
             </script>
             <gcse:searchbox-only></gcse:searchbox-only>
 
-
+          <a href="{{ route(name: 'lang-switch', parameters: 'en') }}">🇬🇧 English</a> | 
+                <a href="{{ route(name: 'lang-switch', parameters: 'nl') }}">🇳🇱 Nederlands</a>
         </div><!--/.navbar-collapse -->
     </div>
 </nav>

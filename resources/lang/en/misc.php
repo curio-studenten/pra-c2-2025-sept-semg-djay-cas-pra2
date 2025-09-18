@@ -28,4 +28,5 @@ return [
 'adres' => "Adres: Knipplein 11, 4707MN, Roosendaal",
 'telefoon' => "Telefoon: +31 6 123 4567",
 'email' => "E-mail: Avarix@gmail.com",
+'homepage_description' => "Test EN"
 ];
