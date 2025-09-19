@@ -6,7 +6,7 @@
         <div id="navbar" class="form-inline">
 
             <script>
-                (function () {
+                (function() {
                     var cx = 'partner-pub-6236044096491918:8149652050';
                     var gcse = document.createElement('script');
                     gcse.type = 'text/javascript';
@@ -17,9 +17,10 @@
                 })();
             </script>
             <gcse:searchbox-only></gcse:searchbox-only>
-
-          <a href="{{ route(name: 'lang-switch', parameters: 'en') }}">🇬🇧 English</a> | 
+            <div class="language-switcher">
+                <a href="{{ route(name: 'lang-switch', parameters: 'en') }}">🇬🇧 English</a> |
                 <a href="{{ route(name: 'lang-switch', parameters: 'nl') }}">🇳🇱 Nederlands</a>
+            </div>
         </div><!--/.navbar-collapse -->
     </div>
 </nav>

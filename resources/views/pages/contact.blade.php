@@ -104,18 +104,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['contact_submit'])) {
             padding: 10px;
             font-size: 1rem;
             border-radius: 6px;
-            border: 1px solid #ccc;
+            border: 1px solid #1565C0;
         }
 
         .contact-form button {
             padding: 12px;
-            background-color: #555555;
+            background-color: #1976D2;
             color: white;
             border: none;
             border-radius: 6px;
             font-weight: bold;
             cursor: pointer;
             transition: background 0.3s ease;
+            margin-bottom: 10px;
         }
 
         .contact-form button:hover {
