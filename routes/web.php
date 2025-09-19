@@ -45,6 +45,8 @@ Route::get('/', function () {
     return view('pages.homepage', compact('brands', 'teamname', 'topManuals', 'description'));
 })->name('home');
 
+Route::get('/letter/{letter}', [BrandController::class, 'letterIndex'])
+    ->where('letter', '[A-Z]');
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);
 Route::get('/manual/{language}/{brand_slug}/brand.html', [RedirectController::class, 'brand']);
 
@@ -63,6 +65,10 @@ Route::get('/{brand_id}/{brand_slug}/{manual_id}/', [ManualController::class, 's
 Route::get('/generateSitemap/', [SitemapController::class, 'generate']);
 
 Route::view('/contact', 'pages.contact')->name('contact');
+
+
+
+
 
 Route::get('/set-locale/{locale}', function (Request $request, $locale) {
     if (! in_array($locale, ['en', 'nl'])) {

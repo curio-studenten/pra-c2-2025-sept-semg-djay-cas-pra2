@@ -31,5 +31,25 @@ class BrandController extends Controller
             "top5Manuals" => $top5Manuals,
             "manuals" => $manuals
         ]);
+
+        
     }
+
+
+    public function letterIndex($letter){
+    
+    $letter = strtoupper($letter);
+
+    $brands = Brand::where('name', 'LIKE', $letter . '%')
+                   ->orderBy('name')
+                   ->get();
+
+    return view('pages.brands_by_letter', [
+        'brands' => $brands,
+        'letter' => $letter
+    ]);
+
+    }   
+
+
 }
