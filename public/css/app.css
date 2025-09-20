@@ -11214,7 +11214,7 @@ a.text-dark:focus {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     transform: translateY(-30px) rotate(25deg);
     opacity: 0;
-    transition: 200ms cubic-bezier(.42, 0, .44, 1.68);
+    transition: 400ms cubic-bezier(.42, 0, .44, 1.68);
     pointer-events: none;
 }
 
@@ -11233,7 +11233,7 @@ a.text-dark:focus {
     border-top: 10px solid black;
     transform: translateY(0) rotate(25deg);
     opacity: 0;
-    transition: 200ms cubic-bezier(.42, 0, .44, 1.68);
+    transition: 400ms cubic-bezier(.42, 0, .44, 1.68);
     pointer-events: none;
 }
 
