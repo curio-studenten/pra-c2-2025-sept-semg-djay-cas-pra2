@@ -19,8 +19,11 @@
         </ul>
     @endif
 
-    <p>Bekijk ook andere letters:</p>
-    @foreach(range('A','Z') as $char)
-        <a href="/letter/{{ $char }}">{{ $char }}</a>
-    @endforeach
+<p>Bekijk ook andere letters:</p>
+@foreach(range('A','Z') as $char)
+    <a href="/letter/{{ $char }}">{{ $char }}</a>
+    @if(!$loop->last)
+        -
+    @endif
+@endforeach
 </x-layouts.app>
