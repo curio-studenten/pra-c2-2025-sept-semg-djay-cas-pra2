@@ -19,7 +19,7 @@
         </ul>
     @endif
 
-<p>Bekijk ook andere letters:</p>
+<p>{{ __('misc.overig') }}</p>
 @foreach(range('A','Z') as $char)
     <a href="/letter/{{ $char }}">{{ $char }}</a>
     @if(!$loop->last)

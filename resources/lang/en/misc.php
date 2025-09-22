@@ -35,5 +35,6 @@ return [
 'error' => "Cannot find a brand with that letter",
 'sent' => "Sent message",
 'top10' => "See our 10 most seen manuals here:",
-'letters' => "Go to letter",
+'letters' => "Go to letter:",
+'overig' => "Take a look at other letters:"
 ];

@@ -36,4 +36,5 @@ return [
 'sent' => "Verstuur bericht",
 'top10' => "bekijk hier onze top 10 handleidingen",
 'letters' => "Ga naar letter",
+'overig' => "Bekijk ook andere letters:",
 ];
