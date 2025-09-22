@@ -24,9 +24,6 @@
         @endforeach
     </ol>
 
-     
-   
-
     <h1>{{ $brand->name }}</h1>
 
     <p>{{ __('introduction_texts.type_list', ['brand' => $brand->name]) }}</p>
