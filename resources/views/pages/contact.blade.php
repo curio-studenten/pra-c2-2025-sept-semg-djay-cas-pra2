@@ -68,20 +68,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['contact_submit'])) {
         </ul>
     </div>
     <?php    endif; ?>
-
     <form action="" method="POST" class="contact-form">
-        <label for="name">Naam</label>
+        {{ __('misc.name') }}
         <input id="name" name="name" required value="<?php    echo htmlspecialchars($_POST['name'] ?? ''); ?>">
 
         <label for="email">E-mail</label>
         <input id="email" name="email" required value="<?php    echo htmlspecialchars($_POST['email'] ?? ''); ?>">
 
-        <label for="message">Bericht</label>
+         {{ __('misc.msg') }}
         <textarea id="message" name="message"
             rows="6"><?php    echo htmlspecialchars($_POST['message'] ?? ''); ?></textarea>
 
         <div style="margin-top:10px">
-            <button class="btn" type="submit" name="contact_submit">Verstuur bericht</button>
+            <button class="btn" type="submit" name="contact_submit">{{ __('misc.sent') }}</button>
         </div>
     </form>
     <?php endif; ?>
