@@ -20,7 +20,7 @@
     </div>
 
     <div class="Ga-naar-letter">
-        <h3>Ga naar letter:</h3>
+        <h3>{{ __('misc.letters') }}
     </div>
 
     <div class="alphabet">
@@ -32,8 +32,7 @@
         @endforeach
     </div>
 
-    <h2>Top 10 meest bekeken handleidingen</h2>
-    <p>{{ __(key: 'misc.homepage_description') }}</p>
+    <h2>{{ __('misc.top10') }}</h2>
 
     <ol>
         @foreach($topManuals as $manual)

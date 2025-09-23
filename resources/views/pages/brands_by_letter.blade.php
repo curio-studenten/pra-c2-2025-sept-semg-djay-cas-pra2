@@ -1,12 +1,12 @@
 <x-layouts.app>
     <x-slot:title>
-        Merken die beginnen met {{ $letter }}
+        {{ __('misc.letter') }}{{ $letter }}
     </x-slot:title>
 
-    <h1>Merken die beginnen met {{ $letter }}</h1>
+    <h1>{{ __('misc.letter') }} {{ $letter }}</h1>
 
     @if($brands->isEmpty())
-        <p>Geen merken gevonden voor deze letter.</p>
+        <p>{{ __('misc.error') }}</p>
     @else
         <ul>
             @foreach($brands as $brand)
@@ -19,7 +19,7 @@
         </ul>
     @endif
 
-<p>Bekijk ook andere letters:</p>
+<p>{{ __('misc.overig') }}</p>
 @foreach(range('A','Z') as $char)
     <a href="/letter/{{ $char }}">{{ $char }}</a>
     @if(!$loop->last)

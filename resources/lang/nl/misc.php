@@ -28,5 +28,13 @@ return [
 'adres' => "Adres: Knipplein 11, 4707MN, Roosendaal",
 'telefoon' => "Telefoon: +31 6 123 4567",
 'email' => "E-mail: Avarix@gmail.com",
-'homepage_description' => "Test NL"
+// 'homepage_description' => "Test NL",
+'name' => "Naam",
+'msg' => "Bericht",
+'letter'=> "Merken die beginnen met:",
+'error'=> "kan geen merk vinden met deze letter",
+'sent' => "Verstuur bericht",
+'top10' => "bekijk hier onze top 10 handleidingen",
+'letters' => "Ga naar letter",
+'overig' => "Bekijk ook andere letters:",
 ];
