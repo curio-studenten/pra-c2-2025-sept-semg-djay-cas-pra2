@@ -3,6 +3,8 @@
         <div class="navbar-header mr-auto">
             <a class="navbar-brand" href="/" title="{{ __('misc.home_alt') }}">{{ __('misc.homepage_title') }}</a>
         </div>
+        <!-- Admin panel link -->
+        <a href="{{route('admin.brands')}}" class="admin-link">Admin-Paneel</h3>
         <div id="navbar" class="form-inline">
 
             <script>

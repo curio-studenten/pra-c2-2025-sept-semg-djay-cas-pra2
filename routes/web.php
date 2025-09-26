@@ -36,6 +36,8 @@ use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\AdminController;   
 use Illuminate\Http\Request;
 
+Route::post('/admin/store', [AdminController::class, 'store'])->name('admin.store');
+
 Route::get('/manual/redirect/{manual}', [ManualController::class, 'redirectToManual'])->name('manual.redirect');
 // Homepage
 Route::get('/', function () {
@@ -45,6 +47,7 @@ Route::get('/', function () {
     $description = __(key: 'misc.homepag_description');
     return view('pages.homepage', compact('brands', 'teamname', 'topManuals', 'description'));
 })->name('home');
+
 
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.brands');
 Route::get('/letter/{letter}', [BrandController::class, 'letterIndex'])

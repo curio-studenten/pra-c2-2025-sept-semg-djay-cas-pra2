@@ -39,7 +39,43 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $validated = $request->validate([
+            'brand_id' => 'required|exists:brands,id',
+            'type_name' => 'required|string|max:255',
+            'link_name' => 'required|url|max:2048',
+        ],
+        [
+            'brand_id.required' => 'Het merk veld is verplicht.',
+            'brand_id.exists' => 'Het geselecteerde merk bestaat niet.',
+            'type_name.required' => 'Het type veld is verplicht.',
+            'type_name.string' => 'Het type veld moet een geldige tekst zijn.',
+            'type_name.max' => 'Het type veld mag niet langer zijn dan 255 tekens.',
+            'link_name.required' => 'Het link veld is verplicht.',
+            'link_name.url' => 'Het link veld moet een geldige URL zijn.',
+            'link_name.max' => 'Het link veld mag niet langer zijn dan 2048 tekens.',
+        ]);
+
+
+
+
+        
+
+        Manual::create([
+            'brand_id' => $validated['brand_id'],
+            'name' => $validated['type_name'],
+            'originUrl' => $validated['link_name'],
+            'views' => 0,
+            'filesize' => 0, // Placeholder, adjust as needed
+
+
+            
+        ]);
+
+        
+
+        
+        return redirect()->route('admin.brands',)->with('success', 'Manual Succesvol toegevoegd!');
     }
 
     /**

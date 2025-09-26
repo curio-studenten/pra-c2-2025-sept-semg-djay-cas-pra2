@@ -51,6 +51,18 @@
     --caption: #6C757D;
 }
 
+
+.error-admin{
+    color: red;
+}
+
+.admin-link{
+    color: var(--tekst-kleur);
+    margin-right: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 .darkmode {
     --achtergrond-kleur: #2B2A3B;
     --tekst-kleur: #FFFFFF;
