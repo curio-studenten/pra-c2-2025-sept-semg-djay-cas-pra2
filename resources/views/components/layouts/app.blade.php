@@ -5,7 +5,7 @@
     <x-head />
 </head>
 
-<body>
+<body   >
 
     <x-navbar />
 
@@ -18,21 +18,21 @@
                 <ul class="breadcrumb">
                     <li><a href="/" title="{{ __('misc.home_alt') }}"
                             alt="{{ __('misc.home_alt') }}">{{ __('misc.home') }}</a></li>ㅤ/ㅤ
-                            <a href="{{ route('contact') }}">Contact</a>ㅤ
+                    <a href="{{ route('contact') }}">Contact</a>ㅤ
                     {{ $breadcrumb ?? '' }}
                 </ul>
 
                 @if (isset($_GET['q']))
-                    <x-search_results />
+                <x-search_results />
                 @else
-                    {{ $slot }}
+                {{ $slot }}
                 @endif
 
                 <ul class="breadcrumb">
                     <li>
                         <a href="/" title="{{ __('misc.home_alt') }}"
-                            alt="{{ __('misc.home_alt') }}">{{ __('misc.home') }}</a>ㅤ/ㅤ  
-                            <a href="{{ route('contact') }}">Contact</a>ㅤ
+                            alt="{{ __('misc.home_alt') }}">{{ __('misc.home') }}</a>ㅤ/ㅤ
+                        <a href="{{ route('contact') }}">Contact</a>ㅤ
                     </li>
                     {{ $breadcrumb ?? '' }}
                 </ul>
@@ -49,9 +49,10 @@
 ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>//window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="{{ asset('/js/app.js') }}"></script>
-
+    <script>
+        //window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+    </script>
+        <script src="{{ asset('/js/app.js') }}"></script>
 </body>
 
 </html>
