@@ -33,6 +33,7 @@ use App\Http\Controllers\ManualController;
 use App\Http\Controllers\ProductCategoryController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\LocaleController;
+use App\Http\Controllers\AdminController;   
 use Illuminate\Http\Request;
 
 Route::get('/manual/redirect/{manual}', [ManualController::class, 'redirectToManual'])->name('manual.redirect');
@@ -45,6 +46,7 @@ Route::get('/', function () {
     return view('pages.homepage', compact('brands', 'teamname', 'topManuals', 'description'));
 })->name('home');
 
+Route::get('/admin', [AdminController::class, 'index'])->name('admin.brands');
 Route::get('/letter/{letter}', [BrandController::class, 'letterIndex'])
     ->where('letter', '[A-Z]');
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);
