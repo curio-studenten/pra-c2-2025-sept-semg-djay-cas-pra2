@@ -1,11 +1,13 @@
-<nav class="navbar navbar-expand navbar-dark bg-dark">
+<nav class="navbar navbar-expand navbar-dark bg-dark full-width-navbar">
     <div class="container">
         <div class="navbar-header mr-auto">
-            <a class="navbar-brand" href="/" title="{{ __('misc.home_alt') }}">{{ __('misc.homepage_title') }}</a>
+            <a class="navbar-brand" href="/" title="{{ __('misc.home_alt') }}">
+                {{ __('misc.homepage_title') }}
+            </a>
         </div>
-        <!-- Admin panel link -->
-        <a href="{{route('admin.brands')}}" class="admin-link">Admin-Paneel</h3>
-        <div id="navbar" class="form-inline">
+        <div>
+            <a href="{{route('admin.brands')}}" class="admin-link">Admin-Paneel</a>
+        </div>
 
             <script>
                 (function() {

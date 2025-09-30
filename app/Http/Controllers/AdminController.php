@@ -21,7 +21,9 @@ class AdminController extends Controller
     public function index ()
     {
          $brands = Brand::with('manuals')->get();
-        return view('pages.admin', compact('brands'));
+         $manuals = Manual::with('brand')->get();
+    
+        return view('pages.admin', compact('brands', 'manuals'));
 
 
     }
@@ -66,10 +68,7 @@ class AdminController extends Controller
             'name' => $validated['type_name'],
             'originUrl' => $validated['link_name'],
             'views' => 0,
-            'filesize' => 0, // Placeholder, adjust as needed
-
-
-            
+            'filesize' => 0,
         ]);
 
         
