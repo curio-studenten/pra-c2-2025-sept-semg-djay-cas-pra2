@@ -37,4 +37,10 @@ return [
 'top10' => "bekijk hier onze top 10 handleidingen",
 'letters' => "Ga naar letter",
 'overig' => "Bekijk ook andere letters:",
+'SelectBrand' => "Merk:",
+'Brand' => "---Selecteer een merk---",
+'SelectType' => "---Voeg een type toe---",
+'AddLink' => "---Voeg een link toe---",
+'Add' => "Toevoegen",
+'AdminPage' => "Admin Paneel",
 ];

@@ -36,5 +36,11 @@ return [
 'sent' => "Sent message",
 'top10' => "See our 10 most seen manuals here:",
 'letters' => "Go to letter:",
-'overig' => "Take a look at other letters:"
+'overig' => "Take a look at other letters:",
+'SelectBrand' => "Brand:",
+'Brand' => "---Select a brand---",
+'SelectType' => "---Add a type---",
+'AddLink' => "---Add a link---",
+'Add' => "Add",
+'AdminPage' => "Admin Panel",
 ];
