@@ -13,14 +13,14 @@
         </li>
     </x-slot:breadcrumb>
 
-     <h2>Top 5 meest bekeken handleidingen</h2>
+    <h2>Top 5 meest bekeken handleidingen</h2>
     <ol>
         @foreach($top5Manuals as $manual)
-            <li>
-                 <a href="{{ route('manual.redirect', ['manual' => $manual->id]) }}" target="_blank">
-                    {{ $manual->name }}
-                </a>
-            </li>
+        <li>
+            <a href="{{ route('manual.redirect', ['manual' => $manual->id]) }}" target="_blank">
+                {{ $manual->name }}
+            </a>
+        </li>
         @endforeach
     </ol>
 
@@ -29,11 +29,15 @@
     <p>{{ __('introduction_texts.type_list', ['brand' => $brand->name]) }}</p>
     <div class="manual-container">
         @foreach ($manuals as $manual)
-            <div class="manual-item">
-                <a href="{{ route('manual.redirect', ['manual' => $manual->id]) }}" target="_blank" title="{{ $manual->name }}">
-                    {{ $manual->name }}
-                </a>
-            </div>
+        <div class="manual-item">
+            <a href="{{ route('manual.redirect', ['manual' => $manual->id]) }}" target="_blank" title="{{ $manual->name }}">
+                {{ $manual->name }}
+            </a>
+            <a href="">
+                Kopieer
+            </a>
+
+        </div>
         @endforeach
     </div>
 </x-layouts.app>

@@ -37,6 +37,7 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Http\Request;
 
 Route::post('/admin/store', [AdminController::class, 'store'])->name('admin.store');
+Route::delete('/admin/delete', [AdminController::class, 'destroy'])->name('admin.destroy');
 
 Route::get('/manual/redirect/{manual}', [ManualController::class, 'redirectToManual'])->name('manual.redirect');
 // Homepage

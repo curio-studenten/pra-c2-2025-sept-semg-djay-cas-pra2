@@ -6,6 +6,9 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+*{
+    transition: 0.2s;
+}
 :root {
     --blue: #3490dc;
     --indigo: #6574cd;
@@ -52,15 +55,19 @@
 }
 
 
-.error-admin{
+.error-admin {
     color: red;
 }
 
-.admin-link{
-    color: var(--tekst-kleur);
+.admin-link {
+    color: var(--link-kleur);
     margin-right: 30px;
     font-size: 18px;
     font-weight: bold;
+}
+
+.admin-link :hover{
+    color: var(--link-hover-kleur);
 }
 
 .darkmode {
@@ -106,9 +113,22 @@ footer {
     margin-bottom: 15px;
 }
 
+.manual-container-admin {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 15px;
+}
+
+.manual-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 .manual-item a {
     display: inline-block;
-    width: 200px;
+    width: 100px;
     height: 60px;
     line-height: 60px;
     border: 1px solid var(--button-border-kleur);
@@ -142,6 +162,53 @@ footer {
         font-size: 13px;
     }
 }
+
+.delete a{
+    width: 50px !important;
+}
+
+.manual-item-admin{
+    display: flex;
+    flex-direction: row;
+}
+.manual-item-admin a {
+    margin-top: 20px;
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    border: 1px solid var(--button-border-kleur);
+    border-radius: 6px;
+    background: var(--button-kleur-2);
+    text-align: center;
+    transition: background 0.2s ease, transform 0.2s ease, width 0.2s ease, height 0.2s ease, line-height 0.2s ease;
+    box-sizing: border-box;
+}
+
+.manual-item-admin a:hover {
+    background: var(--button-hover-kleur-2);
+    transform: translateY(-4px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .manual-item-admin a {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .manual-item-admin a {
+        width: 120px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 13px;
+    }
+}
+
 
 
 footer .Text {
@@ -192,7 +259,6 @@ h6 {
 }
 
 p {
-    margin-top: 0;
     margin-bottom: 1rem;
     color: var(--tekst-kleur);
 }
@@ -4637,6 +4703,17 @@ input[type=button].btn-block {
     padding: 0.8rem 1rem;
 }
 
+.navbar .container {
+    display: flex;
+    flex-wrap: nowrap; 
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    min-width: fit-content;
+}
+
+
+
 .navbar .container,
 .navbar .container-fluid,
 .navbar .container-sm,
@@ -4943,8 +5020,12 @@ input[type=button].btn-block {
 }
 
 .navbar-expand {
+    display: flex;
+    flex-direction: row;
     flex-flow: row nowrap;
     justify-content: flex-start;
+    align-items: center;
+    align-content: center;
 }
 
 .navbar-expand>.container,
@@ -11131,7 +11212,10 @@ a.text-dark:focus {
     text-decoration: none !important;
     display: flex;
     gap: 5px;
+    align-items: center;
 }
+
+
 
 .gsc-search-button-v2 {
     font-size: 0 !important;
@@ -11307,7 +11391,6 @@ button {
 button:hover {
     background-color: var(--button-hover-kleur);
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .cta-button {
