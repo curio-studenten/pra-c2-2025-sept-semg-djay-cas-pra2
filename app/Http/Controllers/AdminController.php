@@ -106,6 +106,12 @@ class AdminController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $manual = Manual::findOrFail($id);
+
+        // Verwijder de manual
+        $manual->delete();
+
+        // Redirect terug met een succesbericht
+        return redirect()->back()->with('success', 'Manual succesvol verwijderd!');
     }
 }
