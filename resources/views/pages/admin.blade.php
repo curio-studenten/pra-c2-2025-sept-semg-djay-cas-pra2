@@ -1,4 +1,6 @@
 <x-layouts.app>
+    <div class="admin-container">
+        <h1 class="admin-title">{{ __('misc.AdminPage') }}</h1>
 
     <h1>Admin pagina</h1>
 
@@ -77,4 +79,22 @@
 
 
 
+            <div class="form-group">
+                <label for="link_name" class="form-label">Link:</label>
+                <input type="url" name="link_name" id="link_name" placeholder="{{ __('misc.AddLink') }}" required
+                    class="form-input">
+                @error('link_name')
+                    <div class="error-message">{{ $message }}</div>
+                @enderror
+            </div>
+
+            @if (session('success'))
+                <div class="alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
+
+            <button type="submit" class="btn-submit">{{ __('misc.Add') }}</button>
+        </form>
+    </div>
 </x-layouts.app>
