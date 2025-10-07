@@ -6,9 +6,10 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-*{
+* {
     transition: 0.2s;
 }
+
 :root {
     --blue: #3490dc;
     --indigo: #6574cd;
@@ -69,7 +70,6 @@
     text-align: center;
     margin-bottom: 1.5rem;
     font-size: 1.8rem;
-    color: #333;
     color: var(--tekst-kleur);
 }
 
@@ -89,13 +89,12 @@
 .form-label {
     margin-bottom: 0.4rem;
     font-weight: 600;
-    color: #444;
     color: var(--tekst-kleur);
 }
 
 .form-input {
     padding: 0.6rem 0.8rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--tekst-kleur);
     border-radius: 8px;
     font-size: 1rem;
     transition: border-color 0.2s;
@@ -105,14 +104,14 @@
 }
 
 .form-input:focus {
-    border-color: #4f46e5;
+    border-color: var(--button-border-kleur);
     outline: none;
 }
 
 .btn-submit {
     padding: 0.8rem;
-    background: #4f46e5;
-    color: #fff;
+    background: var(--button-kleur);
+    color: var(--button-tekst-kleur);
     font-size: 1rem;
     font-weight: 600;
     border: none;
@@ -122,7 +121,7 @@
 }
 
 .btn-submit:hover {
-    background: #3730a3;
+    background: var(--button-hover-kleur);
 }
 
 .alert-success {
@@ -131,6 +130,7 @@
     padding: 0.8rem;
     border-radius: 8px;
     font-size: 0.95rem;
+    margin-bottom: 15px;
 }
 
 .error-message {
@@ -139,7 +139,7 @@
     margin-top: 0.4rem;
 }
 
-.admin-link :hover{
+.admin-link :hover {
     color: var(--link-hover-kleur);
 }
 
@@ -188,9 +188,10 @@ footer {
 
 .manual-container-admin {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin-bottom: 15px;
+    margin-left: 50px;
 }
 
 .manual-flex {
@@ -236,16 +237,33 @@ footer {
     }
 }
 
-.delete a{
-    width: 50px !important;
+.delete button {
+    margin-left: 10px;
+    border: 1px solid var(--button-border-kleur);
+    border-radius: 6px;
+    background: var(--button-kleur-2);
+    text-align: center;
+    transition: background 0.2s ease, transform 0.2s ease, width 0.2s ease, height 0.2s ease, line-height 0.2s ease;
+    box-sizing: border-box;
+    padding-bottom: 24px
 }
 
-.manual-item-admin{
+.delete button:hover {
+    background: var(--button-hover-kleur-2);
+    transform: translateY(-4px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.delete h1{
+    margin-left: 50px;
+}
+
+.manual-item-admin {
     display: flex;
     flex-direction: row;
 }
+
 .manual-item-admin a {
-    margin-top: 20px;
     display: inline-block;
     width: 200px;
     height: 60px;
@@ -4778,7 +4796,7 @@ input[type=button].btn-block {
 
 .navbar .container {
     display: flex;
-    flex-wrap: nowrap; 
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
