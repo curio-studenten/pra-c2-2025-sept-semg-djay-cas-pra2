@@ -1,8 +1,14 @@
 <x-layouts.app>
+     @if (session('success'))
+            <div class="alert-success">
+                {{ session('success') }}
+            </div>
+            @endif
     <div class="admin-container">
         <h1 class="admin-title">{{ __('misc.AdminPage') }}</h1>
 
         <h1>Admin pagina</h1>
+       
 
         <form action="{{ route('admin.store') }}" method="POST">
             @csrf
@@ -31,11 +37,7 @@
                 @enderror
             </div>
 
-            @if (session('success'))
-            <div class="alert-success">
-                {{ session('success') }}
-            </div>
-            @endif
+            
 
             <button type="submit" class="btn-submit">{{ __('misc.Add') }}</button>
         </form>
