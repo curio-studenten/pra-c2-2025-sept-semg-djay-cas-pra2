@@ -43,4 +43,8 @@ return [
 'AddLink' => "---Add a link---",
 'Add' => "Add",
 'AdminPage' => "Admin Panel",
+'delete' => "Delete a manual",
+'chooseBrand' => "-- Choose a brand --",
+'addType' => "Add type...",
+'enterType' => "Enter type:",
 ];

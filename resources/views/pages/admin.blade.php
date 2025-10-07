@@ -16,7 +16,7 @@
             <div class="form-group">
                 <label for="brand_id" class="form-label">Select Brand:</label>
                 <select name="brand_id" id="brand_id" required class="form-input">
-                    <option value="">-- Kies een merk --</option>
+                    <option value="">{{ __('misc.chooseBrand') }}</option>
                     @foreach($brands as $brand)
                     <option value="{{ $brand->id }}">{{ $brand->name }}</option>
                     @endforeach
@@ -24,8 +24,8 @@
             </div>
 
             <div class="form-group">
-                <label for="type_name" class="form-label">Voer type in</label>
-                <input type="text" name="type_name" id="type_name" placeholder="Type toevoegen..." required class="form-input">
+                <label for="type_name" class="form-label">{{ __('misc.enterType') }}</label>
+                <input type="text" name="type_name" id="type_name" placeholder="{{ __('misc.addType') }}" required class="form-input">
             </div>
 
             <div class="form-group">
@@ -43,7 +43,7 @@
         </form>
     </div>
     <div class="delete">
-        <h1>Verwijder een handleiding:</h1>
+        <h1>{{ __('misc.delete') }}</h1>
     </div>
     <div class="manual-container-admin">
         @foreach ($manuals as $manual)

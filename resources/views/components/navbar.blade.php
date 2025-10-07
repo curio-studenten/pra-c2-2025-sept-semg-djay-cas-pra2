@@ -6,7 +6,7 @@
             </a>
         </div>
         <div>
-            <a href="{{route('admin.brands')}}" class="admin-link">Admin-Paneel</a>
+            <a href="{{route('admin.brands')}}" class="admin-link">{{ __('misc.AdminPage') }}</a>
         </div>
 
             <script>

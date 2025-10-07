@@ -43,4 +43,8 @@ return [
 'AddLink' => "---Voeg een link toe---",
 'Add' => "Toevoegen",
 'AdminPage' => "Admin Paneel",
+'delete' => "Verwijder een handleiding",
+'chooseBrand' => "-- Kies een merk --",
+'addType' => "Type toevoegen...",
+'enterType' => "Voer type in:",
 ];
