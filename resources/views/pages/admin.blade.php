@@ -7,7 +7,7 @@
     <div class="admin-container">
         <h1 class="admin-title">{{ __('misc.AdminPage') }}</h1>
 
-        <h1>Admin pagina</h1>
+        
        
 
         <form action="{{ route('admin.store') }}" method="POST">
